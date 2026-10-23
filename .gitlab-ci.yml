@@ -28,7 +28,7 @@ ruff:
 
 ruff-format:
   stage: lint
-  allow failure: true
+  allow_failure: true
   script:
     - uv run ruff format --check
 
