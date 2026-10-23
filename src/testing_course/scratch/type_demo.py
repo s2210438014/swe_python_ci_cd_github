@@ -1,4 +1,4 @@
-#from testing_course.exploration.calculator import Calculator
+from testing_course.exploration.calculator import Calculator
 from testing_course.exploration.person_repository import InMemoryPersonRepository
 
 # calc = Calculator()
