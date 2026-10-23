@@ -1,6 +1,5 @@
 import pytest
-from src.testing_course.scratch.calculator import Calculator
-
+from testing_course.exploration.calculator import Calculator
 
 def find(name: str | None, items=None):
     if items is None:
