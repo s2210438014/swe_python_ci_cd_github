@@ -12,6 +12,7 @@ variables:
 
   default:
     interruptible: true
+    image: ghcr.io/astral-sh/uv:debian-slim
     cache:
       key: 
         files:
