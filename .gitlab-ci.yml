@@ -38,6 +38,7 @@ ty:
   script:
     - uv run ty check
 
+
 pytest:
   stage: test
   script:
