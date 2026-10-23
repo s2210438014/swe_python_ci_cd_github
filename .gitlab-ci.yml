@@ -10,15 +10,15 @@ variables:
   UV_LINKMODE: copy
 
 
-  default:
-    interruptible: true
-    image: ghcr.io/astral-sh/uv:debian-slim
-    cache:
-      key: 
-        files:
-          - uv.lock
-    before_script:
-      - uv sync --locked
+default:
+  interruptible: true
+  image: ghcr.io/astral-sh/uv:debian-slim
+  cache:
+    key: 
+      files:
+        - uv.lock
+  before_script:
+    - uv sync --locked
 
 ruff:
   stage: lint
