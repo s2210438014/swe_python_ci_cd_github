@@ -11,7 +11,7 @@ variables:
 
 
   default:
-    interruptable: true
+    interruptible: true
     cache:
       key: 
         files:
