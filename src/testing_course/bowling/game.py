@@ -1,6 +1,6 @@
 class Game:
     def __init__(self) -> None:
-        self._rolls: list[int] = [] 
+        self._rolls: list[int] = []
 
     def roll(self, *pins: int) -> None:
         self._rolls.extend(pins)
@@ -21,8 +21,3 @@ class Game:
                 roll_index += 2
 
         return score
-
-
-
-
-    

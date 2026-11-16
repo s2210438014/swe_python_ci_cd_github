@@ -29,6 +29,7 @@ def test_divide_by_zero_raises_zero_division_error(calculator: Calculator) -> No
     with pytest.raises(ZeroDivisionError, match="divide by zero"):
         calculator.divide(10, 0)
 
+
 def multiply_cases() -> list[tuple[int, int, int]]:
     return [
         (1, 2, 2),
@@ -36,15 +37,15 @@ def multiply_cases() -> list[tuple[int, int, int]]:
         (3, 6, 18),
     ]
 
+
 @pytest.mark.parametrize(
     ("x", "y", "expected"),
-    multiply_cases()
+    multiply_cases(),
 )
 def test_multiply_returns_correct_result(
-calculator: Calculator, x: int, y: int, expected: int
+    calculator: Calculator, x: int, y: int, expected: int
 ) -> None:
     assert calculator.multiply(x, y) == expected
-
 
 
 @pytest.mark.parametrize(
@@ -55,10 +56,7 @@ calculator: Calculator, x: int, y: int, expected: int
         pytest.param(-2, 2, 0, id="mixed signs"),
         pytest.param(0.1, 0.2, 0.3, id="floating point numbers"),
         pytest.param(10**3, 1, 1001, id="large numbers"),
-    ]
+    ],
 )
-def test_add_returns_sum(
-        calculator: Calculator,
-        x: int, y: int, expected: int
-    ):
-    assert calculator.add(x, y) == pytest.approx(expected) 
+def test_add_returns_sum(calculator: Calculator, x: int, y: int, expected: int):
+    assert calculator.add(x, y) == pytest.approx(expected)
