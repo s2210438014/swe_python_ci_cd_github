@@ -5,6 +5,10 @@ on:
     branches: [ "**" ]
   pull_request:
 
+defaults:
+  run:
+    shell: powershell -ExecutionPolicy Bypass -Command "{0}"
+
 jobs:
   ruff:
     name: ruff
