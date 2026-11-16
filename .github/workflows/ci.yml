@@ -27,7 +27,6 @@ jobs:
   ruff-format:
     name: ruff-format
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,6 +41,7 @@ jobs:
 
       - name: Run ruff format check
         run: uv run ruff format --check
+        continue-on-error: true
 
   ty:
     name: ty
